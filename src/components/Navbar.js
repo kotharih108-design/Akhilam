@@ -117,8 +117,8 @@ export default function Navbar() {
 
       {/* MOBILE MENU */}
       {open && (
-        <div className="flex flex-col md:hidden text-lg bg-brandBlue text-white py-4 px-6 pb-10 space-y-4">
-          <NavLink
+        <div className="fixed top-[80px] inset-0 z-50 flex flex-col md:hidden text-lg bg-brandBlue text-white py-4 px-6 pb-10 space-y-4">
+          <NavLink 
             to="/"
             onClick={() => setOpen(false)}
             className={({ isActive }) =>
