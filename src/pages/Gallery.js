@@ -1,8 +1,11 @@
 import React from 'react'
+import Breadcrumb from '../components/Breadcrumb'
 
 const Gallery = () => {
-  return (
+  return (<>
+   <Breadcrumb />
     <div>Gallery</div>
+  </>
   )
 }
 

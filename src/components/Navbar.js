@@ -18,7 +18,7 @@ export default function Navbar() {
   }, [open]);
 
   return (
-    <nav className="fixed top-0 w-full bg-brandLight text-white shadow-lg font-body">
+    <nav className="fixed top-0 w-full bg-brandLight text-white shadow-lg font-body z-[9999]">
       <div className="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between">
 
         {/* LOGO + NAME */}
@@ -120,6 +120,7 @@ export default function Navbar() {
         <div className="flex flex-col md:hidden text-lg bg-brandBlue text-white py-4 px-6 pb-10 space-y-4">
           <NavLink
             to="/"
+            onClick={() => setOpen(false)}
             className={({ isActive }) =>
               `transition duration-150 ${isActive
                 ? "text-brandOrange font-semibold border-b-2 border-brandOrange mr-[50%]"
@@ -132,6 +133,7 @@ export default function Navbar() {
 
           <NavLink
             to="/about"
+            onClick={() => setOpen(false)}
             className={({ isActive }) =>
               `transition duration-150 ${isActive
                 ? "text-brandOrange font-semibold border-b-2 border-brandOrange mr-[50%]"
@@ -144,6 +146,7 @@ export default function Navbar() {
 
           <NavLink
             to="/products"
+            onClick={() => setOpen(false)}
             className={({ isActive }) =>
               `transition duration-150 ${isActive
                 ? "text-brandOrange font-semibold border-b-2 border-brandOrange mr-[50%]"
@@ -156,6 +159,7 @@ export default function Navbar() {
 
           <NavLink
             to="/gallery"
+            onClick={() => setOpen(false)}
             className={({ isActive }) =>
               `transition duration-150 ${isActive
                 ? "text-brandOrange font-semibold border-b-2 border-brandOrange mr-[50%]"
@@ -168,6 +172,7 @@ export default function Navbar() {
 
           <NavLink
             to="/contact"
+            onClick={() => setOpen(false)}
             className={({ isActive }) =>
               `transition duration-150 ${isActive
                 ? "text-brandOrange font-semibold border-b-2 border-brandOrange mr-[50%]"

@@ -1,8 +1,18 @@
 import React from 'react'
+import ProductsCarousel from '../components/ProductsCarousel'
+import WhyChooseUs from '../components/WhyChooseUs'
+import IndustriesWeServe from '../components/IndustriesWeServe';
 
 const Home = () => {
+    const galleryImages = [
+    "/images/products/master controller.jpeg",
+    "/images/products/anti collission device.jpeg",
+    "/images/products/thruster brake.jpeg",
+    "/images/products/wireless radio remote 1.jpeg",
+  ];
+
   return (<>
-    <section className="relativee bg-white">
+    <section className="relative bg-white">
 
       {/* Background Overlay */}
       <div className="absolute inset-0 bg-gradient-to-r from-brandBlue/10 to-brandOrange/10 pointer-events-none"></div>
@@ -11,7 +21,7 @@ const Home = () => {
 
         {/* LEFT: Heading + Text */}
         <div>
-          <h1 className="text-4xl md:text-3xl lg:text-5xl font-brand font-bold text-brandBlue leading-tight">
+          <h1 className="text-3xl md:text-3xl lg:text-5xl font-brand font-bold text-brandBlue leading-tight">
             Industrial Crane Components &  
             <span className="text-brandOrange"> Automation Solutions</span>
           </h1>
@@ -48,8 +58,8 @@ const Home = () => {
     </section>
 
 
-     <section className="bg-white pt-6 pb-14 md:py-10">
-      <div className="max-w-7xl mx-auto px-6 md:px-10 flex flex-col-reverse md:flex-row gap-12 items-center">
+     <section className="bg-white pt-10 pb-14 md:py-10">
+      <div className="max-w-7xl mx-auto px-6 md:px-10 flex flex-col-reverse lg:flex-row gap-12 items-center">
 
         {/* LEFT : Image */}
         <div className="flex justify-center">
@@ -107,6 +117,70 @@ const Home = () => {
 
       </div>
     </section>
+
+
+<ProductsCarousel />
+
+<WhyChooseUs />
+
+
+{/* gallery section */}
+ <section className="bg-white py-16">
+      <div className="max-w-7xl mx-auto px-6 md:px-12">
+
+        {/* Heading */}
+        <h2 className="text-3xl md:text-4xl font-brand font-bold text-center text-brandBlue mb-10">
+          Product <span className="text-brandOrange">Gallery</span>
+        </h2>
+
+        {/* Grid Gallery */}
+        <div className="grid  sm:grid-cols-2  md:grid-cols-4 gap-6">
+          {galleryImages.map((img, index) => (
+            <div
+              key={index}
+              className="group border border-brandLight rounded-lg overflow-hidden shadow hover:shadow-lg transition"
+            >
+              <img
+                src={img}
+                alt="Akhilam Product"
+                className="w-full h-40 md:h-48 object-contain p-3 transition-transform duration-300 group-hover:scale-110"
+              />
+            </div>
+          ))}
+        </div>
+
+      </div>
+    </section>
+
+
+
+    <IndustriesWeServe />
+
+     <section className="relative py-20 bg-brandBlue">
+
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black/30"></div>
+
+      {/* Content */}
+      <div className="relative max-w-5xl mx-auto px-6 text-center text-white">
+
+        <h2 className="text-3xl md:text-5xl font-brand font-bold mb-6">
+          Need Industrial Crane Components & Automation Solutions?
+        </h2>
+
+        <p className="text-lg md:text-xl max-w-3xl mx-auto mb-10 text-brandLight">
+          Get high-quality remotes, limit switches, brakes, busbars, and safety systems designed for maximum reliability.
+        </p>
+
+        <a
+          href="/contact"
+          className="bg-brandOrange text-white px-10 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-brandBlue transition shadow-lg"
+        >
+          Contact Us Today
+        </a>
+      </div>
+    </section>
+
 
 
     </>
