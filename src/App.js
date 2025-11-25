@@ -7,10 +7,12 @@ import About from './pages/About';
 import Products from './pages/Products';
 import Gallery from './pages/Gallery';
 import Contact from './pages/Contact';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
     <div>
+       <ScrollToTop />
       <Navbar />
       <div className='mt-20'>
       <Routes>
