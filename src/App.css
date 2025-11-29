@@ -80,3 +80,13 @@
   color: var(--brandBlue); 
   border-color: var(--brandBlue); 
 }
+
+
+/* Add this in index.css */
+table {
+  border-collapse: collapse;
+}
+
+::-webkit-scrollbar {
+  height: 6px;  /* ensures visibility on mobile */
+}

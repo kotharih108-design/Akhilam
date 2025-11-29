@@ -2,6 +2,7 @@ import React from 'react'
 import ProductsCarousel from '../components/ProductsCarousel'
 import WhyChooseUs from '../components/WhyChooseUs'
 import IndustriesWeServe from '../components/IndustriesWeServe';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
     const galleryImages = [
@@ -32,15 +33,15 @@ const Home = () => {
 
           {/* CTA Buttons */}
           <div className="mt-8 flex gap-5">
-            <a href="/products"
+            <Link to="/products"
                className="bg-brandBlue text-white px-3 sm:px-6 py-3 rounded-md font-medium hover:bg-brandOrange transition">
               Explore Products
-            </a>
+            </Link>
 
-            <a href="/contact"
+            <Link to="/contact"
                className="border border-brandBlue text-brandBlue px-6 py-3 rounded-md font-medium hover:bg-brandBlue hover:text-white transition">
               Contact Us
-            </a>
+            </Link>
           </div>
         </div>
 
