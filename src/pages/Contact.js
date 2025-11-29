@@ -71,7 +71,7 @@ export default function Contact() {
           </a>
 
           <div>
-            <img src='/images/contact/contact.png' ></img>
+            <img src='/images/contact/contact.png' alt='caontact' ></img>
           </div>
 
         </div>

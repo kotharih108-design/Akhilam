@@ -32,13 +32,19 @@ export default function Gallery() {
               key={index}
               className="cursor-pointer group"
               onClick={() => setSelectedImage(img)}
+              
             >
+              <div className="relative" style={{ backgroundImage: "url('/images/logo/akhilam-logo.png')", backgroundSize: "cover" }}>
+
+              <div className="absolute inset-0 bg-white/95 group-hover:bg-black/80 transition group-hover:scale-105  rounded-lg"></div>
+
               <img
                 src={img.src}
                 alt={img.name}
-                className="w-full h-40 object-contain bg-white border border-brandBlue hover:border-brandOrange rounded-lg p-3 shadow 
-                           transition-transform duration-300 group-hover:scale-105"
-              />
+                className="relative z-10 w-full h-40 object-contain border border-brandBlue hover:border-brandOrange rounded-lg p-3 shadow 
+                transition-transform duration-300 group-hover:scale-105"
+                />
+                </div>
             </div>
           ))}
         </div>

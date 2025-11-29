@@ -79,12 +79,12 @@ export default function Footer() {
               <i className="fa-brands fa-linkedin social "></i>
             </a>
             <a
-              href="/"
+              href="https://wa.me/message/4B42WKA3CWKKE1"
               target="_blank"
               rel="noopener noreferrer"
               className=""
             >
-              <i className="fa-brands fa-twitter social "></i>
+              <i className="fa-brands fa-whatsapp social "></i>
             </a>
             
             </div>
