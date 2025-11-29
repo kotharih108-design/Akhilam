@@ -189,20 +189,20 @@ export default function Navbar() {
 
           <div className="mt-2 flex flex-col gap-2 font-brand">
             <h2>Contact Us :</h2>
-            <a href="tel:+91 99984 88480" target="_blank"
+            <a href="tel:+91 97129 77761" target="_blank"
               rel="noopener noreferrer" className="text-brandOrange flex items-center gap-2">
               <i className="fa-solid fa-phone border rounded-full border-brandOrange py-[10px] p-2 w-10"></i>
-              <span>+91 99984 88480</span>
+              <span>+91 97129 77761</span>
             </a>
-            <a href="mailto:support@apnawebx.com" target="_blank"
+            <a href="mailto:akhilamindustries@gmail.com" target="_blank"
               rel="noopener noreferrer" className="text-brandOrange flex items-center gap-2">
               <i className="fa-solid fa-envelope border rounded-full border-brandOrange py-[10px] p-2 w-10"></i>
-              <span>support@apnawebx.com</span>
+              <span>akhilamindustries@gmail.com</span>
             </a>
             <a href="https://maps.app.goo.gl/xR2eveC552a7iwzU7" target="_blank"
               rel="noopener noreferrer" className="text-brandOrange flex items-center gap-2">
               <i className="fa-solid fa-location-dot border rounded-full border-brandOrange py-[10px] p-2 w-10"></i>
-              <span>Ahmedabad, Gujarat</span>
+              <span>Vatva, Ahmedabad.</span>
             </a>
           </div>
 

@@ -35,20 +35,20 @@ export default function Footer() {
 
           <div className="flex flex-col gap-4">
             
-          <a href="tel:+91 99984 88480" target="_blank"
+          <a href="tel:+91 97129 77761" target="_blank"
               rel="noopener noreferrer" className="text-brandGrey flex items-center gap-2 hover:text-brandOrange transition duration ">
               <i className="fa-solid fa-phone border rounded-full border-brandGrey hover:border-brandOrange py-[10px] p-2 w-10"></i>
-              <span>+91 99984 88480</span>
+              <span>+91 97129 77761</span>
             </a>
-            <a href="mailto:support@apnawebx.com" target="_blank"
+            <a href="mailto:akhilamindustries@gmail.com" target="_blank"
               rel="noopener noreferrer" className="text-brandGrey flex items-center gap-2 hover:text-brandOrange transition durati">
               <i className="fa-solid fa-envelope border rounded-full border-brandGrey hover:border-brandOrange py-[10px] p-2 w-10"></i>
-              <span>support@apnawebx.com</span>
+              <span>akhilamindustries@gmail.com</span>
             </a>
             <a href="https://maps.app.goo.gl/xR2eveC552a7iwzU7" target="_blank"
               rel="noopener noreferrer" className="text-brandGrey flex items-center gap-2 hover:text-brandOrange transition durati">
               <i className="fa-solid fa-location-dot border rounded-full border-brandGrey hover:border-brandOrange py-[10px] p-2 w-10"></i>
-              <span>Ahmedabad, Gujarat</span>
+              <span>Vatva, Ahmedabad</span>
             </a>
 
           {/* Social Icons */}

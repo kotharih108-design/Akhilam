@@ -11,6 +11,7 @@ export default function Contact() {
           Direct <span className="text-brandOrange">Contact Us</span>
         </h2>
 
+
       {/* ROW 1 */}
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12">
 
@@ -19,25 +20,39 @@ export default function Contact() {
 
           {/* Phone CTA */}
           <a
-            href="tel:+919876543210"
+            href="tel:+91 97129 77761"
             className="flex items-center gap-4 bg-brandBlue text-white px-6 py-4 rounded-lg shadow hover:bg-brandOrange transition"
           >
             <i className="fa-solid fa-phone text-2xl"></i>
             <div>
               <h4 className="font-semibold text-lg">Phone</h4>
-              <p className="text-sm opacity-80">+91 98765 43210</p>
+              <p className="text-sm opacity-80">+91 97129 77761</p>
+            </div>
+          </a>
+
+          {/* Phone CTA */}
+          <a
+            href="tel:+91 90161 95212"
+            className="flex items-center gap-4 bg-brandBlue text-white px-6 py-4 rounded-lg shadow hover:bg-brandOrange transition"
+          >
+            <i className="fa-solid fa-phone text-2xl"></i>
+            <div>
+              <h4 className="font-semibold text-lg">Phone</h4>
+              <p className="text-sm opacity-80">+91 90161 95212</p>
             </div>
           </a>
 
           {/* Email CTA */}
           <a
-            href="mailto:info@akhilam.com"
+            href="mailto:support@apnawebx.com"
+             target="_blank"
+            rel="noopener noreferrer"
             className="flex items-center gap-4 bg-brandBlue text-white px-6 py-4 rounded-lg shadow hover:bg-brandOrange transition"
           >
             <i className="fa-solid fa-envelope text-2xl"></i>
             <div>
               <h4 className="font-semibold text-lg">Email</h4>
-              <p className="text-sm opacity-80">info@akhilam.com</p>
+              <p className="text-sm opacity-80">support@apnawebx.com</p>
             </div>
           </a>
 
@@ -63,9 +78,11 @@ export default function Contact() {
 
         {/* RIGHT COLUMN — FORM */}
         <div className="bg-brandLight p-5 md:p-8 rounded-xl shadow-lg">
-          <h3 className="text-2xl font-brand text-brandBlue font-bold mb-4">
+          <h3 className="text-2xl font-brand text-brandBlue font-bold mb-1">
             Send us a Message
           </h3>
+          
+        <p className='mb-4 font-brand text-brandBlue'>We’re here to help. Connect with us for any product inquiry or support.</p>
 
           <form className="space-y-5">
 
