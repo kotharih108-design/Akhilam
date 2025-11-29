@@ -12,7 +12,7 @@ export default function Gallery() {
     { src: "/images/products/rotary gear limit switch.jpeg", name: "Rotary Gear Limit Switch" },
     { src: "/images/products/thruster brake.jpeg", name: "Thruster Brake" },
     { src: "/images/products/wireless radio remote 1.jpeg", name: "Wireless Radio Remote" },
-    { src: "/images/products/wireless radio remote 2.jpeg", name: "Wireless Radio Remote" }
+    { src: "/images/products/wireless radio remote 2.jpg", name: "Wireless Radio Remote" }
   ];
 
   return (<>

@@ -41,7 +41,7 @@ export default function Products() {
     },
     {
       name: "Wireless Radio Remote – Type 2",
-      image: "/images/products/wireless radio remote 2.jpeg",
+      image: "/images/products/wireless radio remote 2.jpg",
       desc: " ergonomic remote system offering high reliability and user-friendly control buttons."
     }
   ];
