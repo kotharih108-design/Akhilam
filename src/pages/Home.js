@@ -6,9 +6,9 @@ import { Link } from 'react-router-dom';
 
 const Home = () => {
     const galleryImages = [
-    "/images/products/master controller.jpeg",
-    "/images/products/anti collission device.jpeg",
-    "/images/products/thruster brake.jpeg",
+    "/images/products/master controller.jpp",
+    "/images/products/anti collission device.jpg",
+    "/images/products/thruster brake.jpg",
     "/images/products/wireless radio remote 1.jpeg",
   ];
 

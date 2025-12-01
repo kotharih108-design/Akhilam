@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom";
 export default function EditGallery() {
   const { id } = useParams();
 
-  const [preview] = useState("/mnt/data/c rail festoon system.jpeg");
+  const [preview] = useState("/mnt/data/c rail festoon system.jpg");
 
   return (
     <AdminLayout>

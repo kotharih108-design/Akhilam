@@ -6,32 +6,32 @@ export default function GalleryList() {
   const [images] = useState([
     {
       id: 1,
-      src: "/images/products/anti collission device.jpeg",
+      src: "/images/products/anti collission device.jpg",
       name: "Anti Collision Device",
     },
     {
       id: 2,
-      src: "/images/products/c rail festoon system.jpeg",
+      src: "/images/products/c rail festoon system.jpg",
       name: "C Rail Festoon System",
     },
     {
       id: 3,
-      src: "/images/products/dsl shrouded busbar.jpeg",
+      src: "/images/products/dsl shrouded busbar.jpg",
       name: "DSL Shrouded Busbar",
     },
     {
       id: 4,
-      src: "/images/products/master controller.jpeg",
+      src: "/images/products/master controller.jpp",
       name: "Master Controller",
     },
     {
       id: 5,
-      src: "/images/products/thruster brake.jpeg",
+      src: "/images/products/thruster brake.jpg",
       name: "Thruster Brake",
     },
     {
       id: 6,
-      src: "/images/products/rotary gear limit switch.jpeg",
+      src: "/images/products/rotary gear limit switch.jpg",
       name: "Rotary Gear Limit Switch",
     },
   ]);

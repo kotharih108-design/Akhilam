@@ -12,19 +12,19 @@ export default function ProductList() {
     {
       _id: "2",
       name: "Master Controller",
-      image: "/images/products/master controller.jpeg",
+      image: "/images/products/master controller.jpp",
       description: "Controller",
     },
     {
       _id: "3",
       name: "DSL Shrouded Busbar",
-      image: "/images/products/dsl shrouded busbar.jpeg",
+      image: "/images/products/dsl shrouded busbar.jpg",
       description: "Busbar",
     },
     {
       _id: "4",
       name: "C-Rail Festoon System",
-      image: "/images/products/c rail festoon system.jpeg",
+      image: "/images/products/c rail festoon system.jpg",
       description: "Festoon",
     },
   ];

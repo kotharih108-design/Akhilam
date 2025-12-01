@@ -5,12 +5,12 @@ export default function Gallery() {
   const [selectedImage, setSelectedImage] = useState(null);
 
   const images = [
-    { src: "/images/products/anti collission device.jpeg", name: "Anti Collision Device" },
-    { src: "/images/products/c rail festoon system.jpeg", name: "C Rail Festoon System" },
-    { src: "/images/products/dsl shrouded busbar.jpeg", name: "DSL Shrouded Busbar" },
-    { src: "/images/products/master controller.jpeg", name: "Master Controller" },
-    { src: "/images/products/rotary gear limit switch.jpeg", name: "Rotary Gear Limit Switch" },
-    { src: "/images/products/thruster brake.jpeg", name: "Thruster Brake" },
+    { src: "/images/products/anti collission device.jpg", name: "Anti Collision Device" },
+    { src: "/images/products/c rail festoon system.jpg", name: "C Rail Festoon System" },
+    { src: "/images/products/dsl shrouded busbar.jpg", name: "DSL Shrouded Busbar" },
+    { src: "/images/products/master controller.jpp", name: "Master Controller" },
+    { src: "/images/products/rotary gear limit switch.jpg", name: "Rotary Gear Limit Switch" },
+    { src: "/images/products/thruster brake.jpg", name: "Thruster Brake" },
     { src: "/images/products/wireless radio remote 1.jpeg", name: "Wireless Radio Remote" },
     { src: "/images/products/wireless radio remote 2.jpg", name: "Wireless Radio Remote" }
   ];

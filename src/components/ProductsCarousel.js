@@ -19,17 +19,17 @@ export default function ProductsCarouselPremium() {
     {
       name: "Master Controller",
       desc: "Reliable and durable master controller used in cranes for smooth operation and accurate control.",
-      image: "/images/products/master controller.jpeg",
+      image: "/images/products/master controller.jpp",
     },
     {
       name: "Rotary Gear Limit Switch",
       desc: "Heavy-duty limit switch for accurate position detection in hoisting mechanisms and cranes.",
-      image: "/images/products/rotary gear limit switch.jpeg",
+      image: "/images/products/rotary gear limit switch.jpg",
     },
     {
       name: "Thruster Brake",
       desc: "High performance thruster brake designed for industrial cranes, ensuring reliable stopping power.",
-      image: "/images/products/thruster brake.jpeg",
+      image: "/images/products/thruster brake.jpg",
     },
   ];
 

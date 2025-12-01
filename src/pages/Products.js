@@ -6,32 +6,32 @@ export default function Products() {
   const products = [
     {
       name: "Anti Crane Collision Device",
-      image: "/images/products/anti collission device.jpeg",
+      image: "/images/products/anti collission device.jpg",
       desc: "Safety device designed to prevent crane-to-crane and crane-to-end collisions, ensuring safe crane operation."
     },
     {
       name: "C-Rail Festoon System",
-      image: "/images/products/c rail festoon system.jpeg",
+      image: "/images/products/c rail festoon system.jpg",
       desc: "High quality C-rail system for smooth cable management in moving crane and hoist systems."
     },
     {
       name: "DSL Shrouded Busbar",
-      image: "/images/products/dsl shrouded busbar.jpeg",
+      image: "/images/products/dsl shrouded busbar.jpg",
       desc: "Insulated DSL busbar system for safe and efficient power transfer in EOT cranes."
     },
     {
       name: "Master Controller",
-      image: "/images/products/master controller.jpeg",
+      image: "/images/products/master controller.jpp",
       desc: "Durable master controller used for precise control in cranes and industrial machinery."
     },
     {
       name: "Rotary Gear Limit Switch",
-      image: "/images/products/rotary gear limit switch.jpeg",
+      image: "/images/products/rotary gear limit switch.jpg",
       desc: "Heavy-duty rotary limit switch designed for accurate hoist and crane position control."
     },
     {
       name: "Thruster Brake",
-      image: "/images/products/thruster brake.jpeg",
+      image: "/images/products/thruster brake.jpg",
       desc: "Powerful thruster brake unit for industrial cranes, providing reliable braking performance."
     },
     {
