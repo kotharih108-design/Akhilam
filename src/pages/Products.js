@@ -21,7 +21,7 @@ export default function Products() {
     },
     {
       name: "Master Controller",
-      image: "/images/products/master controller.jpp",
+      image: "/images/products/master controller.jpg",
       desc: "Durable master controller used for precise control in cranes and industrial machinery."
     },
     {

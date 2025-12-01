@@ -21,7 +21,7 @@ export default function GalleryList() {
     },
     {
       id: 4,
-      src: "/images/products/master controller.jpp",
+      src: "/images/products/master controller.jpg",
       name: "Master Controller",
     },
     {

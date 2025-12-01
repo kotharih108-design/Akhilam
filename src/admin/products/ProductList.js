@@ -12,7 +12,7 @@ export default function ProductList() {
     {
       _id: "2",
       name: "Master Controller",
-      image: "/images/products/master controller.jpp",
+      image: "/images/products/master controller.jpg",
       description: "Controller",
     },
     {

@@ -100,7 +100,7 @@ export default function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           <img src="/images/products/wireless radio remote 2.jpg" className="h-[150px] md:h-[250px] w-full object-cover rounded" alt="footer" />
           <img src="/images/products/thruster brake.jpg" className="h-[150px] md:h-[250px] w-full object-cover rounded" alt="footer"/>
-          <img src="/images/products/master controller.jpp" className="h-[150px] md:h-[250px] w-full object-cover rounded" alt="footer" />
+          <img src="/images/products/master controller.jpg" className="h-[150px] md:h-[250px] w-full object-cover rounded" alt="footer" />
           <img src="/images/products/anti collission device.jpg" className="h-[150px] md:h-[250px] w-full object-cover rounded" alt="footer" />
         </div>
       </div>

@@ -19,7 +19,7 @@ export default function ProductsCarouselPremium() {
     {
       name: "Master Controller",
       desc: "Reliable and durable master controller used in cranes for smooth operation and accurate control.",
-      image: "/images/products/master controller.jpp",
+      image: "/images/products/master controller.jpg",
     },
     {
       name: "Rotary Gear Limit Switch",

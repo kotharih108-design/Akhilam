@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 const Home = () => {
     const galleryImages = [
-    "/images/products/master controller.jpp",
+    "/images/products/master controller.jpg",
     "/images/products/anti collission device.jpg",
     "/images/products/thruster brake.jpg",
     "/images/products/wireless radio remote 1.jpeg",

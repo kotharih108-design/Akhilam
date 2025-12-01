@@ -8,7 +8,7 @@ export default function Gallery() {
     { src: "/images/products/anti collission device.jpg", name: "Anti Collision Device" },
     { src: "/images/products/c rail festoon system.jpg", name: "C Rail Festoon System" },
     { src: "/images/products/dsl shrouded busbar.jpg", name: "DSL Shrouded Busbar" },
-    { src: "/images/products/master controller.jpp", name: "Master Controller" },
+    { src: "/images/products/master controller.jpg", name: "Master Controller" },
     { src: "/images/products/rotary gear limit switch.jpg", name: "Rotary Gear Limit Switch" },
     { src: "/images/products/thruster brake.jpg", name: "Thruster Brake" },
     { src: "/images/products/wireless radio remote 1.jpeg", name: "Wireless Radio Remote" },
