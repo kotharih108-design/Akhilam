@@ -34,8 +34,8 @@ export default function Products() {
             {/* Product Image */}
             <div className="p-4 overflow-hidden">
               <img
-                src={p.image}
-                alt={p.name}
+                src={p.p_image}
+                alt={p.p_name}
                 className="w-full h-52 object-contain transition-transform duration-300 group-hover:scale-110"
               />
             </div>
@@ -43,12 +43,12 @@ export default function Products() {
             {/* Product Name */}
             <h3 className="text-center bg-brandOrange text-white p-2 text-lg font-semibold 
                           transition duration-200 group-hover:bg-brandBlue">
-              {p.name}
+              {p.p_name}
             </h3>
 
             {/* Description */}
             <p className="text-sm text-brandGrey px-4 py-3 text-center">
-              {p.desc}
+              {p.p_description}
             </p>
 
             {/* Button */}

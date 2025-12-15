@@ -1,1 +1,2 @@
-const BASE_URL = "http://localhost:5000";
+const BASE_URL = "https://akhilam.kevalontechnology.in";
+export default BASE_URL;

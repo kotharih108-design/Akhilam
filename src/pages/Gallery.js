@@ -1,19 +1,22 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Breadcrumb from '../components/Breadcrumb'
+import BASE_URL from '../BASEURL.js';
 
 export default function Gallery() {
   const [selectedImage, setSelectedImage] = useState(null);
+  const [images, setImages] = useState([]);
 
-  const images = [
-    { src: "/images/products/anti collission device.jpg", name: "Anti Collision Device" },
-    { src: "/images/products/c rail festoon system.jpg", name: "C Rail Festoon System" },
-    { src: "/images/products/dsl shrouded busbar.jpg", name: "DSL Shrouded Busbar" },
-    { src: "/images/products/master controller.jpg", name: "Master Controller" },
-    { src: "/images/products/rotary gear limit switch.jpg", name: "Rotary Gear Limit Switch" },
-    { src: "/images/products/thruster brake.jpg", name: "Thruster Brake" },
-    { src: "/images/products/wireless radio remote 1.jpeg", name: "Wireless Radio Remote" },
-    { src: "/images/products/wireless radio remote 2.jpg", name: "Wireless Radio Remote" }
-  ];
+  useEffect(() => {
+    fetch(`${BASE_URL}/akhilam/public/gallery`)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status} ${response.statusText}`);
+        }
+        return response.json();
+      })
+      .then(data => setImages(data))
+      .catch(error => console.error('Error fetching gallery:', error));
+  }, []);
 
   return (<>
     <Breadcrumb />
@@ -39,8 +42,8 @@ export default function Gallery() {
               <div className="absolute inset-0 bg-white/95 group-hover:bg-black/80 transition group-hover:scale-105  rounded-lg"></div>
 
               <img
-                src={img.src}
-                alt={img.name}
+                src={img.image}
+                alt={img.i_title}
                 className="relative z-10 w-full h-40 object-contain border border-brandBlue hover:border-brandOrange rounded-lg p-3 shadow 
                 transition-transform duration-300 group-hover:scale-105"
                 />
@@ -68,14 +71,14 @@ export default function Gallery() {
 
               {/* Large Image */}
               <img
-                src={selectedImage.src}
-                alt={selectedImage.name}
+                src={selectedImage.image}
+                alt={selectedImage.i_title}
                 className="w-full object-contain rounded-lg"
               />
 
               {/* Image Title */}
               <h3 className="text-center font-brand p-2 mt-4 text-lg font-semibold text-brandBlue bg-brandOrange">
-                {selectedImage.name}
+                {selectedImage.i_title}
               </h3>
             </div>
 
