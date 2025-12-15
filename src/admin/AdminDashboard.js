@@ -11,7 +11,7 @@ export default function AdminDashboard() {
         </h1>
 
         {/* ======= TOP CARDS ======= */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
 
           {/* TOTAL PRODUCTS */}
           <Link to="/admin/productlist">
@@ -27,6 +27,7 @@ export default function AdminDashboard() {
           </Link>
 
           {/* GALLERY IMAGES */}
+          <Link to="/admin/gallerylist"> 
           <div className="group bg-white shadow-md rounded-xl p-6 border border-brandLight flex items-center gap-5 hover:shadow-xl transition cursor-pointer">
             <div className="bg-brandOrange text-white p-4 rounded-lg group-hover:scale-110 transition">
               <i className="fa-solid fa-image text-2xl"></i>
@@ -36,9 +37,10 @@ export default function AdminDashboard() {
               <h2 className="text-xl font-semibold">120</h2>
             </div>
           </div>
+          </Link>
 
           {/* ADMIN USERS */}
-          <div className="group bg-white shadow-md rounded-xl p-6 border border-brandLight flex items-center gap-5 hover:shadow-xl transition cursor-pointer">
+          {/* <div className="group bg-white shadow-md rounded-xl p-6 border border-brandLight flex items-center gap-5 hover:shadow-xl transition cursor-pointer">
             <div className="bg-brandGrey text-white p-4 rounded-lg group-hover:scale-110 transition">
               <i className="fa-solid fa-users text-2xl"></i>
             </div>
@@ -46,7 +48,7 @@ export default function AdminDashboard() {
               <p className="text-brandGrey text-sm">Admin Users</p>
               <h2 className="text-xl font-semibold">3</h2>
             </div>
-          </div>
+          </div> */}
 
         </div>
 

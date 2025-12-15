@@ -1,50 +1,17 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Breadcrumb from '../components/Breadcrumb'
 import { Link } from "react-router-dom";
+import BASE_URL from '../BASEURL.js';
 
 export default function Products() {
-  const products = [
-    {
-      name: "Anti Crane Collision Device",
-      image: "/images/products/anti collission device.jpg",
-      desc: "Safety device designed to prevent crane-to-crane and crane-to-end collisions, ensuring safe crane operation."
-    },
-    {
-      name: "C-Rail Festoon System",
-      image: "/images/products/c rail festoon system.jpg",
-      desc: "High quality C-rail system for smooth cable management in moving crane and hoist systems."
-    },
-    {
-      name: "DSL Shrouded Busbar",
-      image: "/images/products/dsl shrouded busbar.jpg",
-      desc: "Insulated DSL busbar system for safe and efficient power transfer in EOT cranes."
-    },
-    {
-      name: "Master Controller",
-      image: "/images/products/master controller.jpg",
-      desc: "Durable master controller used for precise control in cranes and industrial machinery."
-    },
-    {
-      name: "Rotary Gear Limit Switch",
-      image: "/images/products/rotary gear limit switch.jpg",
-      desc: "Heavy-duty rotary limit switch designed for accurate hoist and crane position control."
-    },
-    {
-      name: "Thruster Brake",
-      image: "/images/products/thruster brake.jpg",
-      desc: "Powerful thruster brake unit for industrial cranes, providing reliable braking performance."
-    },
-    {
-      name: "Wireless Radio Remote – Type 1",
-      image: "/images/products/wireless radio remote 1.jpeg",
-      desc: "Long-range wireless remote for easy and safe crane operation with multiple functions."
-    },
-    {
-      name: "Wireless Radio Remote – Type 2",
-      image: "/images/products/wireless radio remote 2.jpg",
-      desc: " ergonomic remote system offering high reliability and user-friendly control buttons."
-    }
-  ];
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    fetch(`${BASE_URL}/akhilam/public/products`)
+      .then(response => response.json())
+      .then(data => setProducts(data))
+      .catch(error => console.error('Error fetching products:', error));
+  }, []);
 
   return (<>
 

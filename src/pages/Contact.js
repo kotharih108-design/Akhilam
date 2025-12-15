@@ -44,7 +44,7 @@ export default function Contact() {
 
           {/* Email CTA */}
           <a
-            href="mailto:support@apnawebx.com"
+            href="mailto:akhilamindustries@gmail.com"
              target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-4 bg-brandBlue text-white px-6 py-4 rounded-lg shadow hover:bg-brandOrange transition"
@@ -52,13 +52,13 @@ export default function Contact() {
             <i className="fa-solid fa-envelope text-2xl"></i>
             <div>
               <h4 className="font-semibold text-lg">Email</h4>
-              <p className="text-sm opacity-80">support@apnawebx.com</p>
+              <p className="text-sm opacity-80">akhilamindustries@gmail.com</p>
             </div>
           </a>
 
           {/* Address CTA */}
           <a
-            href="https://www.google.com/maps/place/Akhilam+Industries"
+            href="https://maps.app.goo.gl/VvU6xaaetnm4utsm6"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-4 bg-brandBlue text-white px-6 py-4 rounded-lg shadow hover:bg-brandOrange transition"
@@ -66,7 +66,7 @@ export default function Contact() {
             <i className="fa-solid fa-location-dot text-2xl"></i>
             <div>
               <h4 className="font-semibold text-lg">Address</h4>
-              <p className="text-sm opacity-80">Akhilam Industries, Ahmedabad</p>
+              <p className="text-sm opacity-80">53, Shankheshwar Industrial Park, nr. Vatva Railway Over Bridge Road, Vinoba Bhave Nagar, Dibiyapur, Phase I, Vatva, Ahmedabad, Gujarat 382445</p>
             </div>
           </a>
 
