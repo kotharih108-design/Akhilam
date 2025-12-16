@@ -23,12 +23,12 @@ const Home = () => {
         {/* LEFT: Heading + Text */}
         <div>
           <h1 className="text-3xl md:text-3xl lg:text-5xl font-brand font-bold text-brandBlue leading-tight">
-            Industrial Crane Components &  
-            <span className="text-brandOrange"> Automation Solutions</span>
+            Akhilam Industries Vatva Ahmedabad - Industrial Manufacturer in Vatva
+            <span className="text-brandOrange"> Crane Components & Automation Solutions</span>
           </h1>
 
           <p className="text-brandGrey mt-4 text-lg leading-relaxed">
-            Premium quality crane remotes, limit switches, thruster brakes, busbar systems, and safety devices engineered for reliable industrial performance.
+            Akhilam Industries Ahmedabad is the best industrial company in Ahmedabad, providing premium quality crane remotes, limit switches, thruster brakes, busbar systems, and safety devices engineered for reliable industrial performance. As a trusted industrial manufacturer in Vatva, we offer industrial manufacturing services in Vatva GIDC.
           </p>
 
           {/* CTA Buttons */}
@@ -49,7 +49,7 @@ const Home = () => {
         <div className="flex justify-center">
           <img
             src="/images/home/hero-home.png"
-            alt="Akhilam Industries Products"
+            alt="Industrial Manufacturer in Vatva Ahmedabad - Akhilam Industries Crane Components"
             className="w-full max-w-md rounded-xl shadow-lg border border-brandLight"
           />
         </div>
@@ -66,7 +66,7 @@ const Home = () => {
         <div className="flex justify-center">
           <img
             src="/images/home/about-sec.png"
-            alt="Akhilam Industries"
+            alt="Akhilam Industries Ahmedabad - Best Industrial Company in Vatva"
             className="rounded-xl shadow-lg border border-brandLight"
           />
         </div>
@@ -74,22 +74,23 @@ const Home = () => {
         {/* RIGHT : About Content */}
         <div>
           <h2 className="text-3xl md:text-4xl font-brand font-bold text-brandBlue mb-4">
-            About <span className="text-brandOrange">Akhilam Industries</span>
+            About <span className="text-brandOrange">Akhilam Industries Ahmedabad</span>
           </h2>
 
           <p className="text-brandGrey text-lg leading-relaxed mb-6">
             Akhilam Industries is a trusted manufacturer of high-quality crane components and
-            industrial automation equipment. With a focus on durability, precision, and safety, we deliver
+            industrial automation equipment. Located in Vatva, Ahmedabad, we are the best industrial company in Ahmedabad, focusing on durability, precision, and safety to deliver
             superior engineering solutions for a wide range of industries.
           </p>
 
           <p className="text-brandGrey leading-relaxed mb-6">
             From wireless radio remotes and limit switches to thruster brakes, DSL busbar systems,
             festoon systems, and anti-collision devices — our products are designed to meet
-            heavy-duty industrial demands with maximum reliability.
+            heavy-duty industrial demands with maximum reliability. As an industrial supplier in Vatva Ahmedabad, we provide custom industrial solutions Ahmedabad.
           </p>
 
           {/* Feature List */}
+          <h3 className="text-xl font-semibold text-brandBlue mb-3">Why Choose Akhilam Industries Ahmedabad</h3>
           <ul className="space-y-3 text-brandGrey">
             <li className="flex items-center gap-3">
               <i className="fa-solid fa-circle-check text-brandOrange"></i>
@@ -143,7 +144,7 @@ const Home = () => {
             >
               <img
                 src={img}
-                alt="Akhilam Product"
+                alt="Industrial Products Vatva GIDC - Akhilam Industries Manufacturing"
                 className="w-full h-40 md:h-48 object-contain p-3 transition-transform duration-300 group-hover:scale-110"
               />
             </div>
@@ -166,11 +167,11 @@ const Home = () => {
       <div className="relative max-w-5xl mx-auto px-6 text-center text-white">
 
         <h2 className="text-3xl md:text-5xl font-brand font-bold mb-6">
-          Need Industrial Crane Components & Automation Solutions?
+          Need Industrial Manufacturing Services Ahmedabad?
         </h2>
 
         <p className="text-lg md:text-xl max-w-3xl mx-auto mb-10 text-brandLight">
-          Get high-quality remotes, limit switches, brakes, busbars, and safety systems designed for maximum reliability.
+          Get high-quality remotes, limit switches, brakes, busbars, and safety systems designed for maximum reliability. Contact the top industrial company near Vatva GIDC for affordable industrial solutions in Ahmedabad.
         </p>
 
         <a

@@ -20,7 +20,7 @@ export default function Products() {
 
       {/* Page Title */}
       <h1 className="text-5xl font-brand font-bold text-brandBlue text-center mb-10">
-        Our <span className="text-brandOrange">Products</span>
+        Industrial Product Manufacturer Gujarat - Our <span className="text-brandOrange">Products</span>
       </h1>
 
       {/* Product Grid */}

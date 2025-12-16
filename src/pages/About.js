@@ -16,21 +16,22 @@ const About = () => {
         {/* Content */}
         <div>
           <h2 className="text-3xl md:text-4xl font-brand font-bold text-brandBlue mb-4">
-            About <span className="text-brandOrange">Akhilam Industries</span>
+            About <span className="text-brandOrange">Akhilam Industries Ahmedabad</span>
           </h2>
 
           <p className="text-brandGrey text-lg leading-relaxed mb-6">
             Akhilam Industries is a trusted manufacturer of high-quality crane components
-            and industrial automation equipment. We deliver durable, precision-engineered
+            and industrial automation equipment. Located in Vatva, Ahmedabad, we are the best industrial company in Ahmedabad, delivering durable, precision-engineered
             solutions that meet the demands of heavy-duty industrial operations.
           </p>
 
           <p className="text-brandGrey leading-relaxed mb-6">
             Our expertise includes wireless radio remotes, rotary limit switches,
             thruster brakes, DSL busbars, festoon systems, and anti-collision devices —
-            all designed to improve performance, safety, and efficiency.
+            all designed to improve performance, safety, and efficiency. As an industrial supplier in Vatva Ahmedabad, we provide industrial fabrication services Ahmedabad.
           </p>
 
+          <h3 className="text-xl font-semibold text-brandBlue mb-3">Our Key Features</h3>
           <ul className="space-y-3 text-brandGrey">
             <li className="flex items-center gap-3">
               <i className="fa-solid fa-circle-check text-brandOrange"></i>
@@ -61,7 +62,7 @@ const About = () => {
         <div className="flex justify-center">
           <img
             src="/images/home/about-sec.png"
-            alt="Akhilam Industries"
+            alt="Akhilam Industries Ahmedabad - Industrial Manufacturer in Vatva"
             className="rounded-xl shadow-lg border border-brandLight md:h-[500px] lg:h-full"
           />
         </div>
@@ -122,11 +123,11 @@ const About = () => {
       <div className="relative max-w-5xl mx-auto px-6 text-center text-white">
 
         <h2 className="text-3xl md:text-5xl font-brand font-bold mb-6">
-          Need Industrial Crane Components & Automation Solutions?
+          Need Industrial Manufacturing Services Ahmedabad?
         </h2>
 
         <p className="text-lg md:text-xl max-w-3xl mx-auto mb-10 text-brandLight">
-          Get high-quality remotes, limit switches, brakes, busbars, and safety systems designed for maximum reliability.
+          Get high-quality remotes, limit switches, brakes, busbars, and safety systems designed for maximum reliability. Contact the reliable industrial services in Ahmedabad.
         </p>
 
         <a

@@ -13,7 +13,7 @@ export default function IndustriesWeServe() {
       <div className="max-w-7xl mx-auto px-6 md:px-12 text-center">
 
         <h2 className="text-3xl md:text-4xl font-brand font-bold text-brandBlue mb-10">
-          Industries <span className="text-brandOrange">We Serve</span>
+          Industrial Services in Vatva Ahmedabad - Industries <span className="text-brandOrange">We Serve</span>
         </h2>
 
         <div className="grid sm:grid-cols-3 gap-10">

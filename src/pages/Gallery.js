@@ -25,7 +25,7 @@ export default function Gallery() {
 
         {/* Title */}
         <h2 className="text-5xl font-brand font-bold text-center text-brandBlue mb-10">
-          Our <span className="text-brandOrange">Gallery</span>
+          Factory in Vatva GIDC - Our <span className="text-brandOrange">Gallery</span>
         </h2>
 
         {/* Image Grid */}

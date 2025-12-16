@@ -16,7 +16,7 @@ export default function WhyChooseUs() {
       {/* Content */}
       <div className="relative max-w-7xl mx-auto px-6 md:px-10">
         <h2 className="text-3xl md:text-4xl font-brand font-bold text-center text-brandBlue mb-12">
-          Why <span className="text-brandOrange">Choose Us</span>
+          Why <span className="text-brandOrange">Choose Akhilam Industries Ahmedabad</span>
         </h2>
 
         <div className="grid md:grid-cols-3 gap-10">

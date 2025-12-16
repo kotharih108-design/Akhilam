@@ -71,7 +71,7 @@ export default function Contact() {
           </a>
 
           <div>
-            <img src='/images/contact/contact.png' alt='caontact' ></img>
+            <img src='/images/contact/contact.png' alt='Industrial Services in Vatva Ahmedabad - Contact Akhilam Industries' ></img>
           </div>
 
         </div>
