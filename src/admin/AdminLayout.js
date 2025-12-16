@@ -1,9 +1,19 @@
 import React, { useEffect, useState } from "react";
 import AdminSidebar from "./AdminSidebar";
-import { Outlet } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom";
 
 export default function AdminLayout() {
+  const navigate = useNavigate();
   const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  useEffect(() => {
+    // Check authentication
+    const isAuthenticated = localStorage.getItem("admin-auth");
+    if (!isAuthenticated) {
+      navigate("/login");
+      return;
+    }
+  }, [navigate]);
 
    // 🔥 Disable scroll when sidebar is open
   useEffect(() => {

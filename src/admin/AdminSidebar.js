@@ -1,6 +1,14 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 export default function AdminSidebar({ sidebarOpen, setSidebarOpen }) {
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    localStorage.removeItem("admin-auth");
+    localStorage.removeItem("admin-user");
+    navigate("/login");
+  };
+
   const linkClass = ({ isActive }) =>
     `flex items-center px-3 py-2 rounded-md transition font-medium
      ${isActive ? "bg-brandOrange text-white" : "text-white hover:bg-white/10 hover:text-brandOrange"}`;
@@ -39,9 +47,12 @@ export default function AdminSidebar({ sidebarOpen, setSidebarOpen }) {
             <i className="fa-solid fa-image mr-2"></i> Gallery
           </NavLink>
 
-          <NavLink to="/login" className={linkClass}>
+          <button
+            onClick={handleLogout}
+            className="flex items-center px-3 py-2 rounded-md transition font-medium text-white hover:bg-white/10 hover:text-brandOrange w-full text-left"
+          >
             <i className="fa-solid fa-right-from-bracket mr-2"></i> Logout
-          </NavLink>
+          </button>
         </nav>
       </aside>
     </>

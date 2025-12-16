@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import BASE_URL from "../BASEURL";
 
 export default function Login() {
   const navigate = useNavigate();
@@ -9,18 +10,44 @@ export default function Login() {
     password: "",
   });
 
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
+
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
+    setLoading(true);
+    setError("");
 
-    // FRONTEND ONLY (No backend validation)
-    // Backend developer will replace this with real API
-    if (form.email && form.password) {
-      localStorage.setItem("admin-auth", "true");
-      navigate("/admin");
+    try {
+      const response = await fetch(`${BASE_URL}/akhilam/admin/login`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email: form.email,
+          password: form.password,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        // Store authentication token
+        localStorage.setItem("admin-auth", data.token || "true");
+        localStorage.setItem("admin-user", JSON.stringify(data.user || { email: form.email }));
+        navigate("/admin");
+      } else {
+        setError(data.message || "Login failed. Please check your credentials.");
+      }
+    } catch (error) {
+      setError("Network error. Please try again later.");
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -41,6 +68,13 @@ export default function Login() {
 
         {/* FORM */}
         <form onSubmit={handleLogin} className="space-y-5">
+
+          {/* ERROR MESSAGE */}
+          {error && (
+            <div className="bg-red-50 border border-red-200 text-red-600 px-4 py-3 rounded-lg text-sm">
+              {error}
+            </div>
+          )}
 
           {/* EMAIL */}
           <div>
@@ -79,9 +113,10 @@ export default function Login() {
           {/* LOGIN BUTTON */}
           <button
             type="submit"
-            className="w-full bg-brandBlue hover:bg-brandOrange text-white py-2 rounded-lg font-medium transition"
+            disabled={loading}
+            className="w-full bg-brandBlue hover:bg-brandOrange text-white py-2 rounded-lg font-medium transition disabled:opacity-50 disabled:cursor-not-allowed"
           >
-            Login
+            {loading ? "Logging in..." : "Login"}
           </button>
         </form>
 
