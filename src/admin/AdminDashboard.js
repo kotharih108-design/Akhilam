@@ -1,6 +1,46 @@
 import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import BASE_URL from "../BASEURL";
 
 export default function AdminDashboard() {
+  const [totalProducts, setTotalProducts] = useState(0);
+  const [totalGallery, setTotalGallery] = useState(0);
+
+  useEffect(() => {
+    const fetchTotalProducts = async () => {
+      try {
+        const response = await fetch(`${BASE_URL}/akhilam/public/products`);
+        if (!response.ok) {
+          throw new Error('Failed to fetch products');
+        }
+        const data = await response.json();
+        setTotalProducts(data.length);
+      } catch (err) {
+        console.error(err);
+        // Optionally set to 0 or show error
+      }
+    };
+
+    fetchTotalProducts();
+  }, []);
+
+  useEffect(() => {
+    const fetchTotalGallery = async () => {
+      try {
+        const response = await fetch(`${BASE_URL}/akhilam/gallery`);
+        if (!response.ok) {
+          throw new Error('Failed to fetch gallery');
+        }
+        const data = await response.json();
+        setTotalGallery(data.length);
+      } catch (err) {
+        console.error(err);
+      }
+    };
+
+    fetchTotalGallery();
+  }, []);
+
   return (<>
      {/* PAGE CONTENT */}
       <div className="p-6">
@@ -21,7 +61,7 @@ export default function AdminDashboard() {
               </div>
               <div>
                 <p className="text-brandGrey text-sm">Total Products</p>
-                <h2 className="text-xl font-semibold">7</h2>
+                <h2 className="text-xl font-semibold">{totalProducts}</h2>
               </div>
             </div>
           </Link>
@@ -34,7 +74,7 @@ export default function AdminDashboard() {
             </div>
             <div>
               <p className="text-brandGrey text-sm">Gallery Images</p>
-              <h2 className="text-xl font-semibold">120</h2>
+              <h2 className="text-xl font-semibold">{totalGallery}</h2>
             </div>
           </div>
           </Link>
