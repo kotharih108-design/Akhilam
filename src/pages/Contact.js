@@ -1,7 +1,52 @@
 
 import Breadcrumb from '../components/Breadcrumb'
+import { useState } from 'react'
+import emailjs from '@emailjs/browser'
 
 export default function Contact() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    message: ''
+  })
+  const [loading, setLoading] = useState(false)
+  const [message, setMessage] = useState('')
+  const [messageType, setMessageType] = useState('') // 'success' or 'error'
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    })
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    setLoading(true)
+
+    emailjs.send(
+      "service_ee2hugz",
+      "template_30ul3wm",
+      {
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        message: formData.message
+      },
+      "MmO--L7IF2RZe3SHg"
+    )
+    .then((result) => {
+      setMessage('Message sent successfully!')
+      setMessageType('success')
+      setFormData({ name: '', email: '', phone: '', message: '' })
+      setLoading(false)
+    }, (error) => {
+      setMessage('Failed to send message. Please try again.')
+      setMessageType('error')
+      setLoading(false)
+    })
+  }
   return (<>
   
       <Breadcrumb />
@@ -84,14 +129,18 @@ export default function Contact() {
           
         <p className='mb-4 font-brand text-brandBlue'>We’re here to help. Connect with us for any product inquiry or support.</p>
 
-          <form className="space-y-5">
+          <form className="space-y-5" onSubmit={handleSubmit}>
 
             <div>
               <label className="block text-brandOrange text-xl mb-1 font-semibold">Name</label>
               <input
                 type="text"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
                 className="w-full px-4 py-3 border border-brandOrange rounded-md focus:outline-none focus:ring-1 focus:border-brandBlue"
                 placeholder="Enter your name"
+                required
               />
             </div>
 
@@ -99,8 +148,12 @@ export default function Contact() {
               <label className="block text-brandOrange text-xl mb-1 font-semibold">Email</label>
               <input
                 type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
                 className="w-full px-4 py-3 border  border-brandOrange rounded-md focus:outline-none focus:ring-2 focus:border-brandBlue"
                 placeholder="Enter your email"
+                required
               />
             </div>
 
@@ -108,24 +161,33 @@ export default function Contact() {
               <label className="block text-brandOrange text-xl mb-1 font-semibold">Phone</label>
               <input
                 type="tel"
+                name="phone"
+                value={formData.phone}
+                onChange={handleChange}
                 className="w-full px-4 py-3 border  border-brandOrange rounded-md focus:outline-none focus:ring-2 focus:border-brandBlue"
                 placeholder="Enter your phone"
+                required
               />
             </div>
 
             <div>
               <label className="block text-brandOrange text-xl mb-1 font-semibold">Message</label>
               <textarea
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
                 className="w-full px-4 py-3 border  border-brandOrange rounded-md h-32 resize-none focus:outline-none focus:ring-2 focus:border-brandBlue"
                 placeholder="Enter your message"
+                required
               ></textarea>
             </div>
 
             <button
               type="submit"
-              className="bg-brandBlue text-white px-6 py-3 w-full rounded-md font-semibold hover:bg-brandOrange transition"
+              disabled={loading}
+              className="bg-brandBlue text-white px-6 py-3 w-full rounded-md font-semibold hover:bg-brandOrange transition disabled:opacity-50"
             >
-              Send Message
+              {loading ? 'Sending...' : 'Send Message'}
             </button>
 
           </form>
@@ -146,6 +208,24 @@ export default function Contact() {
       </div>
 
     </section>
+
+    {/* Modal */}
+    {message && (
+      <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+        <div className="bg-white p-6 rounded-lg shadow-lg max-w-sm w-full mx-4">
+          <div className={`text-center ${messageType === 'success' ? 'text-green-600' : 'text-red-600'}`}>
+            <i className={`fa-solid ${messageType === 'success' ? 'fa-check-circle' : 'fa-exclamation-triangle'} text-4xl mb-4`}></i>
+            <p className="text-lg font-semibold mb-4">{message}</p>
+            <button
+              onClick={() => setMessage('')}
+              className="bg-brandBlue text-white px-4 py-2 rounded-md hover:bg-brandOrange transition"
+            >
+              OK
+            </button>
+          </div>
+        </div>
+      </div>
+    )}
     </>
   );
 }
