@@ -112,7 +112,7 @@ export default function Navbar() {
 
         {/* MOBILE MENU BUTTON */}
         <button
-          className="md:hidden text-brandOrange focus:outline-none "
+          className="md:hidden text-brandOrange focus:outline-none  "
           onClick={() => setOpen(!open)}
         >
           {/* <svg width="30" height="30" fill="currentColor">

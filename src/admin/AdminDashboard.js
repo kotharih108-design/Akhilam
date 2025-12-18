@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import BASE_URL from "../BASEURL";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBox, faImage } from '@fortawesome/free-solid-svg-icons';
 
 export default function AdminDashboard() {
   const [totalProducts, setTotalProducts] = useState(0);
@@ -57,7 +59,7 @@ export default function AdminDashboard() {
           <Link to="/admin/productlist">
             <div className="group bg-white shadow-md rounded-xl p-6 border border-brandLight flex items-center gap-5 hover:shadow-xl transition cursor-pointer">
               <div className="bg-brandBlue text-white p-4 rounded-lg group-hover:scale-110 transition">
-                <i className="fa-solid fa-box text-2xl"></i>
+                <FontAwesomeIcon icon={faBox} className="text-2xl" />
               </div>
               <div>
                 <p className="text-brandGrey text-sm">Total Products</p>
@@ -70,7 +72,7 @@ export default function AdminDashboard() {
           <Link to="/admin/gallerylist"> 
           <div className="group bg-white shadow-md rounded-xl p-6 border border-brandLight flex items-center gap-5 hover:shadow-xl transition cursor-pointer">
             <div className="bg-brandOrange text-white p-4 rounded-lg group-hover:scale-110 transition">
-              <i className="fa-solid fa-image text-2xl"></i>
+              <FontAwesomeIcon icon={faImage} className="text-2xl" />
             </div>
             <div>
               <p className="text-brandGrey text-sm">Gallery Images</p>
