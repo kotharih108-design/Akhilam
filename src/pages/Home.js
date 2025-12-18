@@ -5,7 +5,7 @@ import IndustriesWeServe from '../components/IndustriesWeServe';
 import { Link } from 'react-router-dom';
 
 const Home = () => {
-    const galleryImages = [
+  const galleryImages = [
     "/images/products/master controller.jpg",
     "/images/products/anti collission device.jpg",
     "/images/products/thruster brake.jpg",
@@ -22,24 +22,24 @@ const Home = () => {
 
         {/* LEFT: Heading + Text */}
         <div>
-          <h1 className="text-3xl md:text-3xl lg:text-5xl font-brand font-bold text-brandBlue leading-tight">
-            Akhilam Industries Vatva Ahmedabad - Industrial Manufacturer in Vatva
+          <h1 className="text-2xl md:text-2xl lg:text-3xl font-brand font-bold text-brandBlue leading-tight">
+            Akhilam Industries Vatva Ahmedabad - Industrial Manufacturer in Vatva <br></br>
             <span className="text-brandOrange"> Crane Components & Automation Solutions</span>
           </h1>
 
-          <p className="text-brandGrey mt-4 text-lg leading-relaxed">
+          <p className="text-brandGrey mt-4 text-base leading-relaxed">
             Akhilam Industries Ahmedabad is the best industrial company in Ahmedabad, providing premium quality crane remotes, limit switches, thruster brakes, busbar systems, and safety devices engineered for reliable industrial performance. As a trusted industrial manufacturer in Vatva, we offer industrial manufacturing services in Vatva GIDC.
           </p>
 
           {/* CTA Buttons */}
           <div className="mt-8 flex gap-5">
             <Link to="/products"
-               className="bg-brandBlue text-white px-3 sm:px-6 py-3 rounded-md font-medium hover:bg-brandOrange transition">
+              className="bg-brandBlue text-white px-3 sm:px-6 py-3 rounded-md font-medium hover:bg-brandOrange transition">
               Explore Products
             </Link>
 
             <Link to="/contact"
-               className="border border-brandBlue text-brandBlue px-6 py-3 rounded-md font-medium hover:bg-brandBlue hover:text-white transition">
+              className="border border-brandBlue text-brandBlue px-6 py-3 rounded-md font-medium hover:bg-brandBlue hover:text-white transition">
               Contact Us
             </Link>
           </div>
@@ -59,7 +59,7 @@ const Home = () => {
     </section>
 
 
-     <section className="bg-white pt-10 pb-14 md:py-10">
+    <section className="bg-white pt-10 pb-14 md:py-10">
       <div className="max-w-7xl mx-auto px-6 md:px-10 flex flex-col-reverse lg:flex-row gap-12 items-center">
 
         {/* LEFT : Image */}
@@ -90,44 +90,46 @@ const Home = () => {
           </p>
 
           {/* Feature List */}
-          <h3 className="text-xl font-semibold text-brandBlue mb-3">Why Choose Akhilam Industries Ahmedabad</h3>
-          <ul className="space-y-3 text-brandGrey">
-            <li className="flex items-center gap-3">
-              <i className="fa-solid fa-circle-check text-brandOrange"></i>
-              Premium Industrial Crane Components
-            </li>
-            <li className="flex items-center gap-3">
-              <i className="fa-solid fa-circle-check text-brandOrange"></i>
-              Fully Tested & Quality Assured Products
-            </li>
-            <li className="flex items-center gap-3">
-              <i className="fa-solid fa-circle-check text-brandOrange"></i>
-              Expert Support & Long-Term Reliability
-            </li>
-          </ul>
-
-          {/* CTA */}
-          <div className="mt-8">
-            <a
-              href="/contact"
-              className="bg-brandBlue text-white px-6 py-3 rounded-md font-medium hover:bg-brandOrange transition"
-            >
-             Get Quote
-            </a>
-          </div>
         </div>
 
+      </div>
+      <div className="max-w-3xl mx-auto mt-6 bg-brandLight/10 border border-gray-200 shadow-gray-500 rounded-lg p-8 shadow-lg">
+        <h3 className="text-xl font-semibold text-brandBlue mb-3 text-center">Why Choose Akhilam Industries Ahmedabad</h3>
+        <ul className="space-y-3 text-brandGrey text-center">
+          <li className="flex items-center justify-center gap-3">
+            <i className="fa-solid fa-circle-check text-brandOrange"></i>
+            Premium Industrial Crane Components
+          </li>
+          <li className="flex items-center justify-center gap-3">
+            <i className="fa-solid fa-circle-check text-brandOrange"></i>
+            Fully Tested & Quality Assured Products
+          </li>
+          <li className="flex items-center justify-center gap-3">
+            <i className="fa-solid fa-circle-check text-brandOrange"></i>
+            Expert Support & Long-Term Reliability
+          </li>
+        </ul>
+
+        {/* CTA */}
+        <div className="mt-8 flex justify-center">
+          <a
+            href="/contact"
+            className="bg-brandBlue text-white px-6 py-3 rounded-md font-medium hover:bg-brandOrange transition"
+          >
+            Get Quote
+          </a>
+        </div>
       </div>
     </section>
 
 
-<ProductsCarousel />
+    <ProductsCarousel />
 
-<WhyChooseUs />
+    <WhyChooseUs />
 
 
-{/* gallery section */}
- <section className="bg-white py-16">
+    {/* gallery section */}
+    <section className="bg-white py-16">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
 
         {/* Heading */}
@@ -158,7 +160,7 @@ const Home = () => {
 
     <IndustriesWeServe />
 
-     <section className="relative py-20 bg-brandBlue">
+    <section className="relative py-20 bg-brandBlue">
 
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/30"></div>
@@ -185,7 +187,7 @@ const Home = () => {
 
 
 
-    </>
+  </>
   )
 }
 

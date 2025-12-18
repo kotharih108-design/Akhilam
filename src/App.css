@@ -90,3 +90,23 @@ table {
 ::-webkit-scrollbar {
   height: 6px;  /* ensures visibility on mobile */
 }
+Aa App.css ma muki deje aa vadi css
+
+.img-size {
+  height: 500px;
+  width: 500px !important;
+}
+
+@media (max-width:1024px) {
+  .img-size{
+     height: 500px;
+    width: 1000px !important;
+  }
+}
+
+@media (max-width:500px) {
+  .img-size {
+    height: 300px;
+    width: 100vw !important;
+  }
+}
