@@ -1,10 +1,14 @@
 import React, { useEffect, useState } from "react";
 import AdminSidebar from "./AdminSidebar";
 import { Outlet, useNavigate } from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faXmark, faBars } from '@fortawesome/free-solid-svg-icons';
 
 export default function AdminLayout() {
   const navigate = useNavigate();
   const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  const menuIcon = sidebarOpen ? faXmark : faBars;
 
   useEffect(() => {
     // Check authentication
@@ -44,11 +48,7 @@ export default function AdminLayout() {
 
           {/* Mobile Toggle Button */}
           <button onClick={() => setSidebarOpen(!sidebarOpen)} className="border p-[2px]">
-            <i
-              className={`fa-solid ${
-                sidebarOpen ? "fa-xmark" : "fa-bars"
-              } text-2xl`}
-            ></i>
+            <FontAwesomeIcon icon={menuIcon} className="text-2xl" />
           </button>
         </div>
             <div className="mt-16 md:mt-2">

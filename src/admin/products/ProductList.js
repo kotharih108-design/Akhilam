@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import BASE_URL from "../../BASEURL";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlus, faPen, faTrash } from '@fortawesome/free-solid-svg-icons';
 
 export default function ProductList() {
   const [products, setProducts] = useState([]);
@@ -70,7 +72,7 @@ export default function ProductList() {
           to="/admin/add-product"
           className="bg-brandBlue text-white px-4 py-2 rounded-md hover:bg-brandOrange transition flex items-center gap-2"
         >
-          <i className="fa-solid fa-plus"></i> Add New Product
+          <FontAwesomeIcon icon={faPlus} /> Add New Product
         </Link>
       </div>
 
@@ -103,14 +105,14 @@ export default function ProductList() {
                 to={`/admin/edit-product/${prod._id}`}
                 className="bg-brandLight p-1 text-brandBlue hover:text-brandOrange transition"
               >
-                <i className="fa-solid fa-pen"></i>
+                <FontAwesomeIcon icon={faPen} />
               </Link>
 
               <button
                 onClick={() => handleDelete(prod._id)}
                 className=" bg-brandLight p-1 text-red-500 hover:text-red-700 transition"
               >
-                <i className="fa-solid fa-trash"></i>
+                <FontAwesomeIcon icon={faTrash} />
               </button>
             </div>
           </div>

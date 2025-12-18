@@ -1,4 +1,6 @@
 import { NavLink, useNavigate } from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGauge, faBox, faImage, faRightFromBracket } from '@fortawesome/free-solid-svg-icons';
 
 export default function AdminSidebar({ sidebarOpen, setSidebarOpen }) {
   const navigate = useNavigate();
@@ -36,22 +38,22 @@ export default function AdminSidebar({ sidebarOpen, setSidebarOpen }) {
 
         <nav className="space-y-2" onClick={() => setSidebarOpen(false)}>
           <NavLink to="/admin" end className={linkClass}>
-            <i className="fa-solid fa-gauge mr-2"></i> Dashboard
+            <FontAwesomeIcon icon={faGauge} className="mr-2" /> Dashboard
           </NavLink>
 
           <NavLink to="/admin/productlist" className={linkClass}>
-            <i className="fa-solid fa-box mr-2"></i> Products
+            <FontAwesomeIcon icon={faBox} className="mr-2" /> Products
           </NavLink>
 
           <NavLink to="/admin/gallerylist" className={linkClass}>
-            <i className="fa-solid fa-image mr-2"></i> Gallery
+            <FontAwesomeIcon icon={faImage} className="mr-2" /> Gallery
           </NavLink>
 
           <button
             onClick={handleLogout}
             className="flex items-center px-3 py-2 rounded-md transition font-medium text-white hover:bg-white/10 hover:text-brandOrange w-full text-left"
           >
-            <i className="fa-solid fa-right-from-bracket mr-2"></i> Logout
+            <FontAwesomeIcon icon={faRightFromBracket} className="mr-2" /> Logout
           </button>
         </nav>
       </aside>
