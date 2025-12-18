@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLocationDot, faXmark, faBars, faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faInstagram, faFacebook, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons';
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -16,6 +19,8 @@ export default function Navbar() {
       document.body.style.overflow = "auto";      // Cleanup when unmount
     };
   }, [open]);
+
+  const menuIcon = open ? faXmark : faBars;
 
   return (
     <nav className="fixed top-0 w-full bg-brandLight text-white shadow-lg font-body z-[9999]">
@@ -100,7 +105,7 @@ export default function Navbar() {
             rel="noopener noreferrer"
             className=""
           >
-            <i className="fa-solid fa-location-dot icon"></i>
+            <FontAwesomeIcon icon={faLocationDot} className="icon" />
           </a>
 
         </div>
@@ -113,7 +118,7 @@ export default function Navbar() {
           {/* <svg width="30" height="30" fill="currentColor">
             <path d="M4 7h22M4 15h22M4 23h22" />
           </svg> */}
-          <i className={`fa-solid fa-${open ? "xmark" : "bars"} icon`}></i>
+          <FontAwesomeIcon icon={menuIcon} className="icon" />
         </button>
       </div>
 
@@ -191,17 +196,17 @@ export default function Navbar() {
             <h2>Contact Us :</h2>
             <a href="tel:+91 97129 77761" target="_blank"
               rel="noopener noreferrer" className="text-brandOrange flex items-center gap-2">
-              <i className="fa-solid fa-phone border rounded-full border-brandOrange py-[10px] p-2 w-10"></i>
+              <FontAwesomeIcon icon={faPhone} className="border rounded-full border-brandOrange py-[10px] p-2 w-10" />
               <span>+91 97129 77761</span>
             </a>
             <a href="mailto:akhilamindustries@gmail.com" target="_blank"
               rel="noopener noreferrer" className="text-brandOrange flex items-center gap-2">
-              <i className="fa-solid fa-envelope border rounded-full border-brandOrange py-[10px] p-2 w-10"></i>
+              <FontAwesomeIcon icon={faEnvelope} className="border rounded-full border-brandOrange py-[10px] p-2 w-10" />
               <span>akhilamindustries@gmail.com</span>
             </a>
             <a href="https://maps.app.goo.gl/xR2eveC552a7iwzU7" target="_blank"
               rel="noopener noreferrer" className="text-brandOrange flex items-center gap-2">
-              <i className="fa-solid fa-location-dot border rounded-full border-brandOrange py-[10px] p-2 w-10"></i>
+              <FontAwesomeIcon icon={faLocationDot} className="border rounded-full border-brandOrange py-[10px] p-2 w-10" />
               <span>Vatva, Ahmedabad.</span>
             </a>
           </div>
@@ -219,7 +224,7 @@ export default function Navbar() {
               rel="noopener noreferrer"
               className=""
             >
-              <i className="fa-brands fa-instagram social "></i>
+              <FontAwesomeIcon icon={faInstagram} className="social" />
             </a>
             <a
               href="/"
@@ -227,7 +232,7 @@ export default function Navbar() {
               rel="noopener noreferrer"
               className=""
             >
-              <i className="fa-brands fa-facebook social "></i>
+              <FontAwesomeIcon icon={faFacebook} className="social" />
             </a>
             <a
               href="/"
@@ -235,7 +240,7 @@ export default function Navbar() {
               rel="noopener noreferrer"
               className=""
             >
-              <i className="fa-brands fa-linkedin social "></i>
+              <FontAwesomeIcon icon={faLinkedin} className="social" />
             </a>
             <a
               href="/"
@@ -243,7 +248,7 @@ export default function Navbar() {
               rel="noopener noreferrer"
               className=""
             >
-              <i className="fa-brands fa-twitter social "></i>
+              <FontAwesomeIcon icon={faTwitter} className="social" />
             </a>
             
             </div>

@@ -1,3 +1,7 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPhone, faEnvelope, faLocationDot } from '@fortawesome/free-solid-svg-icons';
+import { faInstagram, faFacebook, faLinkedin, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+
 export default function Footer() {
   return (
     <footer className="bg-brandLight pt-10 pb-4 text-brandGrey font-body">
@@ -37,17 +41,17 @@ export default function Footer() {
             
           <a href="tel:+91 97129 77761" target="_blank"
               rel="noopener noreferrer" className="text-brandGrey flex items-center gap-2 hover:text-brandOrange transition duration ">
-              <i className="fa-solid fa-phone border rounded-full border-brandGrey hover:border-brandOrange py-[10px] p-2 w-10"></i>
+              <FontAwesomeIcon icon={faPhone} className="border rounded-full border-brandGrey hover:border-brandOrange py-[10px] p-2 w-10" />
               <span>+91 97129 77761</span>
             </a>
             <a href="mailto:akhilamindustries@gmail.com" target="_blank"
               rel="noopener noreferrer" className="text-brandGrey flex items-center gap-2 hover:text-brandOrange transition durati">
-              <i className="fa-solid fa-envelope border rounded-full border-brandGrey hover:border-brandOrange py-[10px] p-2 w-10"></i>
+              <FontAwesomeIcon icon={faEnvelope} className="border rounded-full border-brandGrey hover:border-brandOrange py-[10px] p-2 w-10" />
               <span>akhilamindustries@gmail.com</span>
             </a>
             <a href="https://maps.app.goo.gl/xR2eveC552a7iwzU7" target="_blank"
               rel="noopener noreferrer" className="text-brandGrey flex items-center gap-2 hover:text-brandOrange transition durati">
-              <i className="fa-solid fa-location-dot border rounded-full border-brandGrey hover:border-brandOrange py-[10px] p-2 w-10"></i>
+              <FontAwesomeIcon icon={faLocationDot} className="border rounded-full border-brandGrey hover:border-brandOrange py-[10px] p-2 w-10" />
               <span>Vatva, Ahmedabad</span>
             </a>
 
@@ -60,7 +64,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               className=""
             >
-              <i className="fa-brands fa-instagram social "></i>
+              <FontAwesomeIcon icon={faInstagram} className="social" />
             </a>
             <a
               href="/"
@@ -68,7 +72,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               className=""
             >
-              <i className="fa-brands fa-facebook social "></i>
+              <FontAwesomeIcon icon={faFacebook} className="social" />
             </a>
             <a
               href="/"
@@ -76,7 +80,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               className=""
             >
-              <i className="fa-brands fa-linkedin social "></i>
+              <FontAwesomeIcon icon={faLinkedin} className="social" />
             </a>
             <a
               href="https://wa.me/message/4B42WKA3CWKKE1"
@@ -84,7 +88,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               className=""
             >
-              <i className="fa-brands fa-whatsapp social "></i>
+              <FontAwesomeIcon icon={faWhatsapp} className="social" />
             </a>
             
             </div>
