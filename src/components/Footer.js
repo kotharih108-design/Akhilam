@@ -1,3 +1,7 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLocationDot, faPhone, faEnvelope, faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import { faInstagram, faFacebook, faLinkedin, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+
 export default function Footer() {
   return (
     <footer className="bg-brandBlue pt-10 pb-4 text-white font-body">
@@ -28,7 +32,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className=""
               >
-                <i className="fa-brands fa-instagram social "></i>
+                <FontAwesomeIcon icon={faInstagram} className="social" />
               </a>
               <a
                 href="/"
@@ -36,7 +40,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className=""
               >
-                <i className="fa-brands fa-facebook social "></i>
+                <FontAwesomeIcon icon={faFacebook} className="social" />
               </a>
               <a
                 href="/"
@@ -44,7 +48,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className=""
               >
-                <i className="fa-brands fa-linkedin social "></i>
+                <FontAwesomeIcon icon={faLinkedin} className="social" />
               </a>
               <a
                 href="https://wa.me/message/4B42WKA3CWKKE1"
@@ -52,7 +56,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className=""
               >
-                <i className="fa-brands fa-whatsapp social "></i>
+                <FontAwesomeIcon icon={faWhatsapp} className="social" />
               </a>
 
             </div>
@@ -62,11 +66,11 @@ export default function Footer() {
         <div className="flex flex-col items-start  font-brand font-semibold">
           <h3 className="text-white border-b-2 w-full text-left font-semibold mb-3 text-lg">Navigation</h3>
           <ul className="space-y-2">
-            <li><a href="/" className="hover:text-brandOrange transition"><i class="fa-solid fa-chevron-right mr-3"></i> Home</a></li>
-            <li><a href="/about" className="hover:text-brandOrange transition"><i class="fa-solid fa-chevron-right mr-3"></i>About Us</a></li>
-            <li><a href="/products" className="hover:text-brandOrange transition"><i class="fa-solid fa-chevron-right mr-3"></i>Products</a></li>
-            <li><a href="/gallery" className="hover:text-brandOrange transition"><i class="fa-solid fa-chevron-right mr-3"></i>Gallery</a></li>
-            <li><a href="/contact" className="hover:text-brandOrange transition"><i class="fa-solid fa-chevron-right mr-3"></i>Contact</a></li>
+            <li><a href="/" className="hover:text-brandOrange transition"><FontAwesomeIcon icon={faChevronRight} className="mr-3" /> Home</a></li>
+            <li><a href="/about" className="hover:text-brandOrange transition"><FontAwesomeIcon icon={faChevronRight} className="mr-3" />About Us</a></li>
+            <li><a href="/products" className="hover:text-brandOrange transition"><FontAwesomeIcon icon={faChevronRight} className="mr-3" />Products</a></li>
+            <li><a href="/gallery" className="hover:text-brandOrange transition"><FontAwesomeIcon icon={faChevronRight} className="mr-3" />Gallery</a></li>
+            <li><a href="/contact" className="hover:text-brandOrange transition"><FontAwesomeIcon icon={faChevronRight} className="mr-3" />Contact</a></li>
           </ul>
         </div>
 
@@ -92,18 +96,18 @@ export default function Footer() {
           <div className="flex flex-col gap-4">
             <a href="https://maps.app.goo.gl/xR2eveC552a7iwzU7" target="_blank"
               rel="noopener noreferrer" className="text-white flex items-center gap-2 hover:text-brandOrange transition durati">
-              <i className="fa-solid fa-location-dot border rounded-full border-brandGrey hover:border-brandOrange py-[10px] p-2 w-10"></i>
+              <FontAwesomeIcon icon={faLocationDot} className="border rounded-full border-brandGrey hover:border-brandOrange py-[10px] p-2 w-10" />
               <span>
 53, Shankheshwar Industrial Park, nr. Vatva Railway Over Bridge Road, Vinoba Bhave Nagar, Dibiyapur, Phase I, Vatva, Ahmedabad, Gujarat 382445</span>
             </a>
             <a href="tel:+91 97129 77761" target="_blank"
               rel="noopener noreferrer" className="text-white flex items-center gap-2 hover:text-brandOrange transition duration ">
-              <i className="fa-solid fa-phone border rounded-full border-brandGrey hover:border-brandOrange py-[10px] p-2 w-10"></i>
+              <FontAwesomeIcon icon={faPhone} className="border rounded-full border-brandGrey hover:border-brandOrange py-[10px] p-2 w-10" />
               <span>+91 97129 77761</span>
             </a>
             <a href="mailto:akhilamindustries@gmail.com" target="_blank"
               rel="noopener noreferrer" className="text-white flex items-center gap-2 hover:text-brandOrange transition durati">
-              <i className="fa-solid fa-envelope border rounded-full border-brandGrey hover:border-brandOrange py-[10px] p-2 w-10"></i>
+              <FontAwesomeIcon icon={faEnvelope} className="border rounded-full border-brandGrey hover:border-brandOrange py-[10px] p-2 w-10" />
               <span>akhilamindustries<br />@gmail.com</span>
             </a>
 
