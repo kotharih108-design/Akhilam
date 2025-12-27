@@ -24,7 +24,7 @@ const Home = () => {
         <div>
           <h1 className="text-2xl md:text-2xl lg:text-3xl font-brand font-bold text-brandBlue leading-tight">
             Akhilam Industries Vatva Ahmedabad - Industrial Manufacturer in Vatva <br></br>
-            <span className="text-brandOrange"> Crane Components & Automation Solutions</span>
+            <span className="text-brandOrange"> Crane Components & Automation Solutions.</span>
           </h1>
 
           <p className="text-brandGrey mt-4 text-base leading-relaxed">
