@@ -6,7 +6,7 @@ export default function Breadcrumb() {
 
   return (
    <nav
-  className="relative h-[130px] sm:h-[250px] md:h-[300px] lg:h-[400px] xl:h-[450px] py-6 px-6 flex items-center"
+  className="relative h-[250px] md:h-[300px] lg:h-[400px] xl:h-[450px] py-6 px-6 flex items-center"
   style={{
     backgroundImage: "url('/images/logo/breadchrumb-bg.png')",
     backgroundSize: "cover",

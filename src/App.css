@@ -110,3 +110,17 @@ Aa App.css ma muki deje aa vadi css
     width: 100vw !important;
   }
 }
+
+.topper-nav{
+  display: block;
+}
+
+@media (max-width:1023px) {
+  .topper-nav{
+  display: none;
+}
+}
+
+.hidden{
+  display: none;
+}

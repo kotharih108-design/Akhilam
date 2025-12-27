@@ -3,6 +3,9 @@ import ProductsCarousel from '../components/ProductsCarousel'
 import WhyChooseUs from '../components/WhyChooseUs'
 import IndustriesWeServe from '../components/IndustriesWeServe';
 import { Link } from 'react-router-dom';
+import ContactWhyChoose from '../components/ContactWhyChoose';
+import ClientsSection from '../components/ClientsSection';
+import StatsCounter from '../components/StatsCounter';
 
 const Home = () => {
   const galleryImages = [
@@ -156,9 +159,13 @@ const Home = () => {
       </div>
     </section>
 
+    <StatsCounter />
 
+    <ClientsSection />
 
     <IndustriesWeServe />
+
+    <ContactWhyChoose />
 
     <section className="relative py-20 bg-brandBlue">
 

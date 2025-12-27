@@ -12,9 +12,9 @@ export default function Footer() {
         {/* COLUMN 1: Logo + Description */}
         <div>
           <img
-            src="/images/logo/akhilam-logo.png"
+            src="/images/logo/akhilam-white.png"
             alt="Akhilam Industries"
-            className="h-[150px] mb-3 bg-white"
+            className="h-[150px] mb-3"
           />
           <p className="text-sm leading-relaxed font-brand mb-3">
             Trusted industrial partner providing reliable crane components, safety systems, and innovative automation solutions.
@@ -102,12 +102,12 @@ export default function Footer() {
             </a>
             <a href="tel:+91 97129 77761" target="_blank"
               rel="noopener noreferrer" className="text-white flex items-center gap-2 hover:text-brandOrange transition duration ">
-              <FontAwesomeIcon icon={faPhone} className="border rounded-full border-brandGrey hover:border-brandOrange py-[10px] p-2 w-10" />
+              <FontAwesomeIcon icon={faPhone} className="border rounded-full border-brandGrey hover:border-brandOrange py-[10px] p-2 w-3" />
               <span>+91 97129 77761</span>
             </a>
             <a href="mailto:akhilamindustries@gmail.com" target="_blank"
               rel="noopener noreferrer" className="text-white flex items-center gap-2 hover:text-brandOrange transition durati">
-              <FontAwesomeIcon icon={faEnvelope} className="border rounded-full border-brandGrey hover:border-brandOrange py-[10px] p-2 w-10" />
+              <FontAwesomeIcon icon={faEnvelope} className="border rounded-full border-brandGrey hover:border-brandOrange py-[10px] p-2 w-3" />
               <span>akhilamindustries<br />@gmail.com</span>
             </a>
 

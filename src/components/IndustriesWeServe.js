@@ -1,29 +1,44 @@
 export default function IndustriesWeServe() {
-  const items = [
-    { icon: "fa-industry", title: "Manufacturing Plants" },
-    { icon: "fa-building", title: "Warehouses" },
-    { icon: "fa-truck-ramp-box", title: "Material Handling" },
-    { icon: "fa-ship", title: "Ports & Logistics" },
-    { icon: "fa-bolt", title: "Power Plants" },
-    { icon: "fa-hammer", title: "Construction Sites" },
+  const industries = [
+    { title: "Heavy Industries", img: "/images/industries/heavy.jpg" },
+    { title: "Steel & Rolling Mills", img: "/images/industries/steel.jpg" },
+    { title: "Crane Manufacturer", img: "/images/industries/crane.jpg" },
+    { title: "Paper & Pulp Industry", img: "/images/industries/paper.jpg" },
+    { title: "Mining Industry", img: "/images/industries/mining.jpg" },
+    { title: "Power Plants", img: "/images/industries/power.jpg" },
+    { title: "Port & Shipyard", img: "/images/industries/port.jpg" },
+    { title: "Foundry & Forging", img: "/images/industries/foundry.jpg" },
   ];
 
   return (
-    <section className="bg-brandLight py-16">
-      <div className="max-w-7xl mx-auto px-6 md:px-12 text-center">
+    <section className="py-16 bg-white">
+      <div className="max-w-7xl mx-auto px-6">
 
-        <h2 className="text-3xl md:text-4xl font-brand font-bold text-brandBlue mb-10">
-          Industrial Services in Vatva Ahmedabad - Industries <span className="text-brandOrange">We Serve</span>
+        {/* Heading */}
+        <h2 className="text-3xl md:text-4xl font-bold text-center text-brandBlue mb-12">
+          Industries We Cater To
         </h2>
 
-        <div className="grid sm:grid-cols-3 gap-10">
-          {items.map((item, i) => (
+        {/* Grid */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8">
+          {industries.map((item, index) => (
             <div
-              key={i}
-              className="p-8 border rounded-xl shadow hover:shadow-lg transition bg-white"
+              key={index}
+              className="group text-center transition"
             >
-              <i className={`fa-solid ${item.icon} text-4xl text-brandOrange mb-4`}></i>
-              <h3 className="text-xl font-semibold text-brandBlue">{item.title}</h3>
+              {/* Image Card */}
+              <div className="overflow-hidden rounded-xl shadow-md">
+                <img
+                  src={item.img}
+                  alt={item.title}
+                  className="w-full h-44 object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+
+              {/* Title */}
+              <h3 className="mt-3 text-sm md:text-base font-semibold text-brandBlue">
+                {item.title}
+              </h3>
             </div>
           ))}
         </div>

@@ -18,6 +18,7 @@ import GalleryList from './admin/gallery/GalleryList';
 import AddGallery from './admin/gallery/AddGallery';
 import EditGallery from './admin/gallery/EditGallery';
 import Login from './admin/Login';
+import TopHeader from './components/TopHeader';
 
 
 function App() {
@@ -26,8 +27,9 @@ function App() {
 
 
       <ScrollToTop />
+      <TopHeader />
       <Navbar />
-      <div className='mt-20'>
+      <div className='mt-0 md:mt-12 lg:mt-20'>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />

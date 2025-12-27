@@ -3,6 +3,9 @@ import Breadcrumb from '../components/Breadcrumb'
 
 import WhyChooseUs from '../components/WhyChooseUs'
 import { Link } from 'react-router-dom';
+import StatsCounter from '../components/StatsCounter';
+import ClientsSection from '../components/ClientsSection';
+import IndustriesWeServe from '../components/IndustriesWeServe';
 
 const About = () => {
   return (<>
@@ -111,6 +114,12 @@ const About = () => {
     </section>
 
     <WhyChooseUs />
+
+    <StatsCounter />
+
+    <ClientsSection />
+
+    <IndustriesWeServe />
 
 
     {/* big CTA */}
