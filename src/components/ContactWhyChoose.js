@@ -25,15 +25,15 @@ export default function ContactWhyChoose() {
 
     try {
       await emailjs.send(
-        "service_ee2hugz",
-        "template_30ul3wm",
+        "service_mujcyiq",
+        "template_s6pq3mc",
         {
           name: formData.name,
           email: formData.email,
           phone: formData.phone,
           message: formData.message
         },
-        "MmO--L7IF2RZe3SHg"
+        "tnoJFCpDxSJmyjTZR"
       );
       setStatus('success');
       setFormData({ name: '', email: '', phone: '', message: '' });
