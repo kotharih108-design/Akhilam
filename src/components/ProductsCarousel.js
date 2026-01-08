@@ -4,34 +4,36 @@ import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import BASE_URL from "../BASEURL";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTimes } from "@fortawesome/free-solid-svg-icons";
 
 export default function ProductsCarouselPremium() {
   const [selectedProduct, setSelectedProduct] = useState(null);
+  const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-  const products = [
-    {
-      name: "Wireless Radio Remote",
-      desc: "Industrial-grade wireless remote control with long-range, multi-channel communication and rugged enclosure.",
-      image: "/images/products/wireless radio remote 1.jpeg ",
-    },
-    {
-      name: "Master Controller",
-      desc: "Reliable and durable master controller used in cranes for smooth operation and accurate control.",
-      image: "/images/products/master controller.jpg",
-    },
-    {
-      name: "Rotary Gear Limit Switch",
-      desc: "Heavy-duty limit switch for accurate position detection in hoisting mechanisms and cranes.",
-      image: "/images/products/rotary gear limit switch.jpg",
-    },
-    {
-      name: "Thruster Brake",
-      desc: "High performance thruster brake designed for industrial cranes, ensuring reliable stopping power.",
-      image: "/images/products/thruster brake.jpg",
-    },
-  ];
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const response = await fetch(`${BASE_URL}/akhilam/public/products`);
+        if (!response.ok) {
+          throw new Error('Failed to fetch products');
+        }
+        const data = await response.json();
+        setProducts(data);
+      } catch (err) {
+        setError(err.message);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchProducts();
+  }, []);
 
   return (
     <section className="bg-whitee pt-10">
@@ -50,41 +52,64 @@ export default function ProductsCarouselPremium() {
           Our <span className="text-brandOrange">Products</span>
         </h2>
 
+        {/* Loading State */}
+        {loading && (
+          <div className="flex justify-center items-center py-20">
+            <div className="text-white text-lg">Loading products...</div>
+          </div>
+        )}
+
+        {/* Error State */}
+        {error && (
+          <div className="flex justify-center items-center py-20">
+            <div className="text-red-300 text-lg">Error: {error}</div>
+          </div>
+        )}
+
         {/* Swiper Carousel */}
-        <Swiper
-          modules={[Autoplay]}
-          autoplay={{ delay: 2000 }}
-          loop={true}
-          spaceBetween={30}
-          slidesPerView={1}
-          breakpoints={{
-            540: { slidesPerView: 2 },
-            768: { slidesPerView: 2 },
-            1024: { slidesPerView: 3 },
-          }}
-          className="pb-14"
-        >
-          {products.map((p, i) => (
-            <SwiperSlide key={i}>
-              <div
-                className="group bg-white border border-brandOrange rounded-xl shadow hover:shadow-xl cursor-pointer transition"
-                onClick={() => setSelectedProduct(p)}
-              >
-                <img
-                  src={p.image}
-                  alt={p.name}
-                  className="w-full h-56 object-contain mb-4 "
-                />
+        {!loading && !error && products.length > 0 && (
+          <Swiper
+            modules={[Autoplay]}
+            autoplay={{ delay: 2000 }}
+            loop={true}
+            spaceBetween={30}
+            slidesPerView={1}
+            breakpoints={{
+              540: { slidesPerView: 2 },
+              768: { slidesPerView: 2 },
+              1024: { slidesPerView: 3 },
+            }}
+            className="pb-14"
+          >
+            {products.map((p, i) => (
+              <SwiperSlide key={i}>
+                <div
+                  className="group bg-white border border-brandOrange rounded-xl shadow hover:shadow-xl cursor-pointer transition"
+                  onClick={() => setSelectedProduct(p)}
+                >
+                  <img
+                    src={p.p_image}
+                    alt={p.p_name}
+                    className="w-full h-56 object-contain mb-4 "
+                  />
 
-                <h3 className="text-center rounded-b-xl bg-brandOrange md:bg-brandGrey text-white font-semibold text-lg p-1 
-                 transition duration-200 group-hover:bg-brandOrange">
-                  {p.name}
-                </h3>
-              </div>
+                  <h3 className="text-center rounded-b-xl bg-brandOrange md:bg-brandGrey text-white font-semibold text-lg p-1 
+                   transition duration-200 group-hover:bg-brandOrange">
+                    {p.p_name}
+                  </h3>
+                </div>
 
-            </SwiperSlide>
-          ))}
-        </Swiper>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        )}
+
+        {/* No Products State */}
+        {!loading && !error && products.length === 0 && (
+          <div className="flex justify-center items-center py-20">
+            <div className="text-white text-lg">No products available</div>
+          </div>
+        )}
 
         {/* Product Description Modal */}
         {selectedProduct && (
@@ -93,27 +118,24 @@ export default function ProductsCarouselPremium() {
 
               {/* Close Button */}
               <button
-                className="absolute top-3 right-3 text-brandOrange text-2xl"
+                className="absolute top-3 right-3 text-brandOrange text-2xl hover:text-brandBlue transition-colors"
                 onClick={() => setSelectedProduct(null)}
               >
-                <i className="fa-solid fa-xmark"></i>
+                <FontAwesomeIcon icon={faTimes} />
               </button>
 
               <h3 className="text-2xl py-2 font-brand font-bold text-brandBlue mb-2 text-center">
-                {selectedProduct.name}
+                {selectedProduct.p_name}
               </h3>
 
               <img
-                src={selectedProduct.image}
-                alt={selectedProduct.name}
+                src={selectedProduct.p_image}
+                alt={selectedProduct.p_name}
                 className="w-full h-52 object-contain mb-4"
               />
 
-
-
-
               {/* <p className="text-brandGrey leading-relaxed mb-4">
-                {selectedProduct.desc}
+                {selectedProduct.p_description}
               </p> */}
 
               <Link
